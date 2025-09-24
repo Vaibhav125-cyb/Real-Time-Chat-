@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat Application</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="server-container">
+            <div class="server-header">
+                <h3>WebSocket Server Console</h3>
+            </div>
+            <div class="server-console" id="server-console">
+                <div class="server-message">✅ WebSocket Server initialized on port 8080</div>
+                <div class="server-message">Waiting for connections...</div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Real-Time Chat</h2>
+                <div class="status">
+                    <span class="status-indicator connected" id="status-indicator"></span>
+                    <span id="status-text">Connected</span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be inserted here -->
+            </div>
+
+            <div class="typing-indicator" id="typing-indicator"></div>
+
+            <div class="chat-input">
+                <input type="text" class="message-input" id="message-input" placeholder="Type a message...">
+                <button class="send-button" id="send-button" type="button" title="Send message">
+                    <svg class="send-icon" viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+   <script src="server.js"></script>
+</body>
+
+</html>
